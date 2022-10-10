@@ -35,7 +35,7 @@ function Checkout({ cart, order, onCaptureCheckout, error }) {
 
         setCheckoutToken(token);
       } catch (error) {
-        //navigate("/");
+        navigate("/");
       }
     };
 
@@ -109,6 +109,7 @@ function Checkout({ cart, order, onCaptureCheckout, error }) {
         checkoutToken={checkoutToken}
         shippingData={shippingData}
         backStep={backStep}
+        nextStep={nextStep}
         onCaptureCheckout={onCaptureCheckout}
         timeout={timeout}
       />

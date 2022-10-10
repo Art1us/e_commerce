@@ -160,7 +160,7 @@ function AddressForm({ checkoutToken, next }) {
             <Button component={Link} to="/cart" variant="outlined">
               Back to Cart
             </Button>
-            <Button type="submit" variant="contained" color="primary">
+            <Button type="submit" variant="contained" color="primary" disabled={!shippingOption}>
               Next
             </Button>
           </div>

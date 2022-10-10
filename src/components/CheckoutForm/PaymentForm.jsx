@@ -14,7 +14,6 @@ const stripePromise = loadStripe(
 );
 
 
-
 function PaymentForm({
   checkoutToken,
   backStep,
@@ -24,7 +23,6 @@ function PaymentForm({
   timeout
 }) {
 
-    console.log(shippingData)
 
 
   const handleSubmit = async (event, elements, stripe) => {
@@ -41,7 +39,6 @@ function PaymentForm({
     if (error) {
       console.log(error);
     } else {
-        console.log(shippingData)
       const orderData = {
         line_items: checkoutToken.line_items,
         customer: {
@@ -94,7 +91,6 @@ function PaymentForm({
                 <Button
                   variant="contained"
                   type="submit"
-                  
                   color="primary"
                 >
                   Pay {checkoutToken.subtotal.formatted_with_symbol}
